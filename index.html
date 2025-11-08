@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spaghetti Aglio e Olio</title>
+  <style>
+    /* Embedded CSS */
+    :root {
+      --bg-grad-1: #fffaf3;
+      --bg-grad-2: #fff6ee;
+      --accent: #d9534f;
+      --accent-2: #f7b267;
+      --muted: #6b7280;
+      --card-bg: rgba(255,255,255,0.85);
+      --shadow: 0 8px 24px rgba(20,20,20,0.08);
+      --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #2c2f33;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: linear-gradient(135deg, var(--bg-grad-1), var(--bg-grad-2));
+    }
+    header {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    .tagline {
+      font-style: italic;
+      color: var(--muted);
+    }
+    section {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      margin-top: 1rem;
+      color: #34495e;
+      border-left: 6px solid var(--accent-2);
+      padding-left: 12px;
+    }
+    ul, ol {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    li {
+      margin: 0.5rem 0;
+    }
+    figure {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    figcaption {
+      font-style: italic;
+      color: var(--muted);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      cursor: zoom-in;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      color: #666;
+      border-top: 1px solid #eee;
+    }
+    #return-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+      opacity: 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    #return-to-top.visible {
+      display: block;
+      opacity: 1;
+    }
+    #return-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .done {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav>
+      <div class="logo">Italian Cuisine</div>
+      <ul>
+        <li><a href="#introduction">About</a></li>
+        <li><a href="#recipe">Recipe</a></li>
+        <li><a href="#" class="print-btn">Print Recipe</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Spaghetti Aglio e Olio</h1>
+      <p class="tagline">A classic Italian pasta dish with simple ingredients</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <p>
+        Spaghetti Aglio e Olio is a traditional Italian pasta dish that hails from Naples. It's the epitome of elegance in simplicity—made with just a handful of pantry staples, yet bursting with bold, comforting flavor.
+      </p>
+      <figure>
+        <img src="https://media.istockphoto.com/id/1388417437/photo/homemade-italian-spaghetti-algio-e-olio.jpg?s=612x612&w=0&k=20&c=gocHozUlPyNStETLkDTqU5uTOQYDWLXLa8_FCb_yCjM=" alt="Spaghetti Aglio e Olio">
+        <figcaption>A classic Italian pasta dish with garlic, olive oil, and chili flakes.</figcaption>
+      </figure>
+    </section>
+
+    <section id="recipe">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>200g spaghetti</li>
+        <li>4 cloves garlic (thinly sliced)</li>
+        <li>1/4 cup extra virgin olive oil</li>
+        <li>1/2 teaspoon red pepper flakes (adjust to taste)</li>
+        <li>Salt (to taste)</li>
+        <li>Fresh parsley (chopped, for garnish)</li>
+        <li>Grated Parmesan cheese (optional)</li>
+      </ul>
+
+      <h2>Instructions</h2>
+      <ol>
+        <li>Boil the Pasta
+          <ul>
+            <li>Bring a large pot of salted water to a boil</li>
+            <li>Add spaghetti and cook until <i>al dente</i>, usually 8-10 minutes.</li>
+            <li>Reserve 1/2 cup of pasta water, then drain the rest.</li>
+          </ul>
+        </li>
+        <li>Saute the Garlic
+          <ul>
+            <li>Heat olive oil in a skillet over medium heat.</li>
+            <li>Add sliced garlic and cook until golden (1-2 minutes).</li>
+          </ul>
+        </li>
+        <li>Add Red Pepper Flakes
+          <ul>
+            <li>Stir in red pepper flakes and cook for 30 seconds.</li>
+          </ul>
+        </li>
+        <li>Combine Pasta and Sauce
+          <ul>
+            <li>Add drained spaghetti to the skillet.</li>
+            <li>Toss to coat in garlic oil.</li>
+            <li>Add reserved pasta water if needed.</li>
+          </ul>
+        </li>
+        <li>Garnish and Serve
+          <ul>
+            <li>Sprinkle with parsley and parmesan.</li>
+            <li>Serve immediately while hot.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <figure>
+        <img src="https://www.allrecipes.com/thmb/S4FuCwZ8jd3ffD60Hqy1tllmy50=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/AR-222000-spaghetti-aglio-e-olio-DDMFS-ingredients-3x4-752f17bca22f4b7eaaf1890e5e1cb8cc.jpg" alt="Ingredients for Spaghetti Aglio e Olio">
+        <figcaption>Ingredients needed for Spaghetti Aglio e Olio.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://content.instructables.com/FH3/YAEX/IH6JTUNR/FH3YAEXIH6JTUNR.jpg?auto=webp&frame=1&width=414&height=1024&fit=bounds&md=MjAxNS0xMS0yMCAwNjowMTowNy4w" alt="Your finished Spaghetti Aglio e Olio dish">
+        <figcaption>The finished Spaghetti Aglio e Olio ready to serve.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>©
